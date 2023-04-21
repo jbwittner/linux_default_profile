@@ -28,9 +28,31 @@ fi
 
 echo "Configuration de Zsh..."
 
-# Crée un lien symbolique vers le fichier de configuration Zsh
-ln -s $HOME/.configenv/zsh/.zshrc $HOME/.zshrc
+# Vérifie si le fichier .zshrc est un lien symbolique
+if [ -L "$HOME/.zshrc" ]; then
+  # Vérifie si le lien symbolique pointe bien vers le fichier de configuration Zsh
+  if [ "$(readlink $HOME/.zshrc)" = "$HOME/.configenv/zsh/.zshrc" ]; then
+    echo "Le lien symbolique pour le fichier .zshrc est déjà configuré."
+  else
+    # Supprime le lien symbolique existant et crée un nouveau lien
+    echo "Le lien symbolique pour le fichier .zshrc existe déjà mais ne pointe pas vers le fichier de configuration Zsh. Il sera supprimé et remplacé par un nouveau lien symbolique vers le fichier de configuration Zsh."
+    rm "$HOME/.zshrc"
+    ln -s $HOME/.configenv/zsh/.zshrc $HOME/.zshrc
+  fi
+else
+  # Vérifie si le fichier .zshrc existe déjà
+  if [ -f "$HOME/.zshrc" ]; then
+    # Supprime le fichier .zshrc existant et crée un nouveau lien symbolique
+    echo "Le fichier .zshrc existe déjà mais n'est pas un lien symbolique. Il sera supprimé et remplacé par un nouveau lien symbolique vers le fichier de configuration Zsh."
+    rm "$HOME/.zshrc"
+    ln -s $HOME/.configenv/zsh/.zshrc $HOME/.zshrc
+  else
+    # Crée un lien symbolique vers le fichier de configuration Zsh
+    ln -s $HOME/.configenv/zsh/.zshrc $HOME/.zshrc
+  fi
+fi
 
+# Installe les plugins zsh-autosuggestions et zsh-syntax-highlighting
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
