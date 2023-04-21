@@ -1,0 +1,3 @@
+export USER_GITHUB_LOGIN=""
+export USER_GITHUB_KEY=""
+export SONAR_TOKEN=""

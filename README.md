@@ -7,7 +7,7 @@ Le répertoire prévu pour ce répository est `.configenv` à la raçine du `$HO
 Il suffit donc de cloner le projet de la manière suivante :
 
 ```
-git clone git@github.com:jbwittner/linux_default_profile.git .configenv
+git clone git@github.com:jbwittner/linux_default_profile.git $HOME/.configenv
 ```
 
 Lancer la commande 
