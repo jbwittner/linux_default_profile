@@ -23,6 +23,7 @@
     draft = !sh -c 'git push origin HEAD:refs/drafts/${1}' -
     publish = !sh -c 'git push origin HEAD:refs/for/${1}' -
     yolo = !sh -c 'git add -A && git commit -m \"$(curl -s http://whatthecommit.com/index.txt)\"'
+    
 [core]
     # Set default options for core Git functionality
     pager = less
