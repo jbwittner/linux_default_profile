@@ -3,6 +3,10 @@
 # Création du dossier workspace dans le répertoire $HOME
 mkdir -p $HOME/workspace
 
+# Appelle le script de configuration de Git
+echo "Configuration de Git..."
+./conf_git.sh
+
 # Appelle le script de configuration de Zsh
 echo "Configuration de Zsh..."
 ./conf_zsh.sh
