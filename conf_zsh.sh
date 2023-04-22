@@ -43,12 +43,28 @@ else
   ln -s $HOME/.configenv/zsh/.zshrc $HOME/.zshrc
 fi
 
-# Clone les plugins zsh-autosuggestions et zsh-syntax-highlighting
-echo "[INFO] Installation des plugins zsh-autosuggestions et zsh-syntax-highlighting..."
-git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+# Vérifie si le plugin zsh-autosuggestions est installé et le met à jour s'il l'est
+echo "[INFO] Vérification de l'installation du plugin zsh-autosuggestions..."
+if [ -d "$HOME/.oh-my-zsh/custom/plugins/zsh-autosuggestions" ]; then
+  echo "[INFO] Le plugin zsh-autosuggestions est déjà installé. Mise à jour du plugin..."
 
-echo "[INFO] Redémarrage de Zsh..."
+  # Met à jour le plugin zsh-autosuggestions
+  (cd "$HOME/.oh-my-zsh/custom/plugins/zsh-autosuggestions" && git pull origin master)
+else
+  # Clone le plugin zsh-autosuggestions
+  echo "[INFO] Installation du plugin zsh-autosuggestions..."
+  git clone https://github.com/zsh-users/zsh-autosuggestions "$HOME/.oh-my-zsh/custom/plugins/zsh-autosuggestions"
+fi
 
-# Redémarre le terminal Zsh
-exec zsh
+# Vérifie si le plugin zsh-syntax-highlighting est installé et le met à jour s'il l'est
+echo "[INFO] Vérification de l'installation du plugin zsh-syntax-highlighting..."
+if [ -d "$HOME/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting" ]; then
+  echo "[INFO] Le plugin zsh-syntax-highlighting est déjà installé. Mise à jour du plugin..."
+# Met à jour le plugin zsh-syntax-highlighting
+  (cd "$HOME/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting" && git pull origin master)
+else
+
+  Clone le plugin zsh-syntax-highlighting
+  echo "[INFO] Installation du plugin zsh-syntax-highlighting..."
+  git clone https://github.com/zsh-users/zsh-syntax-highlighting.git "$HOME/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting"
+fi

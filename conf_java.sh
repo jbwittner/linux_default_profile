@@ -18,7 +18,7 @@ else
   source "$HOME/.sdkman/bin/sdkman-init.sh"
   
   # Met à jour SDKMAN!
-  sdk selfupdate
+  sdk selfupdate force
   sdk update
 fi
 
@@ -61,7 +61,4 @@ else
   fi
 fi
 
-echo "[INFO] Redémarrage de Zsh..."
-
-# Redémarre le terminal Zsh
-exec zsh
+echo "[INFO] Terminé, un redémarrage de Zsh est nécessaire..."

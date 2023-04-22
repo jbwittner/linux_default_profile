@@ -43,7 +43,4 @@ else
   ln -s $HOME/.configenv/npm/.npmrc $HOME/.npmrc
 fi
 
-echo "[INFO] Redémarrage de Zsh..."
-
-# Redémarre le terminal Zsh
-exec zsh
+echo "[INFO] Terminé, un redémarrage de Zsh est nécessaire..."
