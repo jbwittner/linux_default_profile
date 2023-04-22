@@ -8,7 +8,6 @@ plugins=(
   git
   git-flow
   git-prompt
-  lol
   sdk
   zsh-autosuggestions
   zsh-syntax-highlighting
