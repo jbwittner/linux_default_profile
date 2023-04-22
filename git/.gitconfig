@@ -1,0 +1,102 @@
+[user]
+    name = Jean-Baptiste WITTNER
+    email = jb.wittner@outlook.com
+
+[http]
+    # Disable SSL verification for HTTPS connections
+    sslVerify = true
+
+[color]
+    # Enable colors in color-supporting terminals
+    ui = auto
+
+[alias]
+    # Define command aliases for commonly used Git commands
+    st = status
+    ci = commit
+    lg = log --graph --date=relative --pretty=format:'%C(auto)%h%d %Cblue%<(10)%cr%Creset %s %Cgreen(%<(15)%an)%Creset' --all
+    l = log --oneline
+    oops = commit --amend --no-edit
+    co = checkout
+    update = pull --ff-only
+    patch = commit --amend --no-edit --reset-author
+    draft = !sh -c 'git push origin HEAD:refs/drafts/${1}' -
+    publish = !sh -c 'git push origin HEAD:refs/for/${1}' -
+    yolo = !sh -c 'git add -A && git commit -m \"$(curl -s https://whatthecommit.com/index.txt)\"'
+    
+[core]
+    # Set default options for core Git functionality
+    pager = less
+    editor = code --wait
+    whitespace = -trailing-space
+
+[diff]
+    # Use descriptive initials for changes
+    mnemonicPrefix = true
+    # Show renames/moves as such
+    renames = true
+    # When using --word-diff, assume --word-diff-regex=.
+    wordRegex = .
+    # Display submodule-related information (commit listings)
+    submodule = log
+
+[fetch]
+    # Automatically fetch submodule changes (sadly, won't auto-update)
+    recurseSubmodules = on-demand
+
+[grep]
+    # Consider most regexes to be ERE
+    extendedRegexp = true
+
+[log]
+    # Use full commit hashes in log output
+    abbrevCommit = false
+    # Automatically --follow when given a single path
+    follow = true
+
+[merge]
+    # Display common-ancestor blocks in conflict hunks
+    conflictStyle = diff3
+
+[pull]
+    # Only fast-forward when pulling changes
+    ff = only
+    # Set the current branch to its push target by default
+    default = upstream
+
+[push]
+    # Push the current branch to its push target by default
+    default = current
+    # Follow tags whose commit-ishs are now reachable upstream
+    followTags = true
+
+[rerere]
+    # Enable the rerere feature to automatically resolve conflicts
+    # that have been resolved before
+    autoupdate = true
+    enabled = true
+
+[status]
+    # Recursively traverse untracked directories to display all contents
+    showUntrackedFiles = all
+    # Display submodule rev change summaries in status
+    submoduleSummary = true
+
+[color "branch"]
+    # Use cyan instead of blue on black in git branch
+
+[difftool "vscode"]
+    # Use Visual Studio Code as the diff tool
+    cmd = code --wait --diff $LOCAL $REMOTE
+
+[mergetool "vscode"]
+    # Clean up backup files created by merge tools on tool exit
+    keepBackup = false
+    # Clean up temp files created by merge tools on tool exit
+    keepTemporaries = false
+    # Put the temp files in a dedicated dir anyway
+    writeToTemp = true
+    # Auto-accept file prompts when launching merge tools
+    prompt = false
+    # Use Visual Studio Code as the merge tool
+    cmd = code --wait $MERGED
