@@ -17,7 +17,7 @@ alias cdworkspace='cd $HOME/workspace'
 
 source $ZSH/oh-my-zsh.sh
 
-source $HOME/.configenv/env-vars.sh
+source $HOME/.configenv/zsh/env-vars.sh
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
