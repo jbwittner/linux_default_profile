@@ -1,0 +1,23 @@
+<application>
+  <component name="RecentProjectsManager">
+    <option name="additionalInfo">
+      <map>
+        <entry key="$USER_HOME$/workspace/bankwiz_server">
+          <value>
+            <RecentProjectMetaInfo frameTitle="bankwiz_server – application.yaml" opened="true" projectWorkspaceId="2P13lbtwCcAyHdkUAZswmixYV45">
+              <option name="activationTimestamp" value="1683148572597" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="IU-231.8109.175" />
+              <option name="buildTimestamp" value="1680000277671" />
+              <frame x="1920" y="27" width="1270" height="1053" extendedState="6" />
+              <option name="productionCode" value="IU" />
+              <option name="projectOpenTimestamp" value="1683142859177" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="lastOpenedProject" value="$USER_HOME$/workspace/bankwiz_server" />
+    <option name="lastProjectLocation" value="$USER_HOME$/workspace" />
+  </component>
+</application>

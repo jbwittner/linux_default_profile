@@ -1,0 +1,12 @@
+<application>
+  <component name="MaterialThemeConfig">
+    <option name="compactDropdowns" value="true" />
+    <option name="treeFontSizeEnabled" value="true" />
+    <option name="tabFontSizeEnabled" value="true" />
+    <option name="indicatorStyle" value="None" />
+    <option name="accentColor" value="009688" />
+    <option name="userId" value="-5e961147:187c16d911f:-8000" />
+    <option name="version" value="8.6.3" />
+    <option name="tabHighlightPosition" value="Bottom" />
+  </component>
+</application>
