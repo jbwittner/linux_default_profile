@@ -19,6 +19,10 @@ echo "Configuration de Java..."
 echo "Configuration de NPM..."
 ./conf_npm.sh
 
+# Appelle le script de configuration de VSCode
+echo "Configuration de VSCode..."
+./conf_vscode.sh
+
 echo "[INFO] Terminé, redémarrage de Zsh..."
 
 # Redémarre le terminal Zsh

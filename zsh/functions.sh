@@ -8,11 +8,12 @@ docker_container_stop() {
 }
 
 docker_container_clean() {
-    if [ $(docker ps -q | wc -l) -gt 0 ]; then
-        docker stop $(docker ps -aq) && docker rm $(docker ps -aq)
-        echo "All running Docker containers have been stopped and removed."
+    docker_container_stop
+    if [ $(docker ps -aq | wc -l) -gt 0 ]; then
+        docker rm $(docker ps -aq)
+        echo "All Docker containers have been removed."
     else
-        echo "No running Docker containers found."
+        echo "No Docker containers found."
     fi
 }
 

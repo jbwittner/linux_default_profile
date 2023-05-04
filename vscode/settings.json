@@ -1,0 +1,16 @@
+{
+    "workbench.colorTheme": "GitHub Dark",
+    "boot-java.rewrite.reconcile": true,
+    "workbench.iconTheme": "material-icon-theme",
+    "git.confirmSync": false,
+    "git.enableSmartCommit": true,
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+    "sonarlint.connectedMode.connections.sonarcloud": [
+        {
+            "organizationKey": "jbwittner",
+            "connectionId": "jbwittner-sonar"
+        }
+    ],
+    "githubPullRequests.createOnPublishBranch": "never"
+}

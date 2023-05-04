@@ -1,3 +1,4 @@
 export USER_GITHUB_LOGIN=""
 export USER_GITHUB_KEY=""
 export SONAR_TOKEN=""
+export NEXT_TELEMETRY_DISABLED=1
