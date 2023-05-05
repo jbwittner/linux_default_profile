@@ -14,6 +14,7 @@ plugins=(
 )
 
 alias cdworkspace='cd $HOME/workspace'
+alias pn=pnpm
 
 source $ZSH/oh-my-zsh.sh
 
