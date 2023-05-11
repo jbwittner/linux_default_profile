@@ -12,5 +12,6 @@
             "connectionId": "jbwittner-sonar"
         }
     ],
-    "githubPullRequests.createOnPublishBranch": "never"
+    "githubPullRequests.createOnPublishBranch": "never",
+    "workbench.editor.enablePreview": false
 }

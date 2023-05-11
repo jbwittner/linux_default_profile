@@ -4,14 +4,14 @@
       <map>
         <entry key="$USER_HOME$/workspace/bankwiz_server">
           <value>
-            <RecentProjectMetaInfo frameTitle="bankwiz_server – application.yaml" opened="true" projectWorkspaceId="2P13lbtwCcAyHdkUAZswmixYV45">
-              <option name="activationTimestamp" value="1683148572597" />
+            <RecentProjectMetaInfo frameTitle="bankwiz_server – pom.xml (server)" opened="true" projectWorkspaceId="2PbKUU52dc2nBmB4hEzI0HvCpmR">
+              <option name="activationTimestamp" value="1683837129631" />
               <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
               <option name="build" value="IU-231.8109.175" />
-              <option name="buildTimestamp" value="1680000277671" />
-              <frame x="1920" y="27" width="1270" height="1053" extendedState="6" />
+              <option name="buildTimestamp" value="1680000287695" />
+              <frame x="1920" y="27" width="1280" height="1053" extendedState="6" />
               <option name="productionCode" value="IU" />
-              <option name="projectOpenTimestamp" value="1683142859177" />
+              <option name="projectOpenTimestamp" value="1683818819008" />
             </RecentProjectMetaInfo>
           </value>
         </entry>
