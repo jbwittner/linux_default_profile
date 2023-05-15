@@ -36,3 +36,7 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
+
+#Go
+PATH=$PATH:/usr/local/go/bin
+#Go

@@ -61,8 +61,8 @@
       </ViewImpl>
       <TabImpl>
         <option name="displayName" value="Threads &amp; Variables" />
-        <option name="leftProportion" value="0.19719473" />
-        <option name="rightProportion" value="0.19719473" />
+        <option name="leftProportion" value="0.1970305" />
+        <option name="rightProportion" value="0.1970305" />
       </TabImpl>
       <TabImpl>
         <option name="bottomProportion" value="0.0" />
