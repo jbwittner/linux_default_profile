@@ -1,5 +1,10 @@
 #!/bin/bash
 
+if [ "$EUID" -ne 0 ]
+  then echo "Please run as root"
+  exit
+fi
+
 # Création du dossier workspace dans le répertoire $HOME
 mkdir -p $HOME/workspace
 
