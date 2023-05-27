@@ -21,6 +21,7 @@ source $ZSH/oh-my-zsh.sh
 source $HOME/.configenv/zsh/env-vars.sh
 source $HOME/.configenv/zsh/functions.sh
 source $HOME/.configenv/zsh/functions.sh-completion
+source $HOME/.configenv/zsh/_gh
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
@@ -40,3 +41,6 @@ esac
 #Go
 PATH=$PATH:/usr/local/go/bin
 #Go
+
+autoload -U compinit
+compinit -i
