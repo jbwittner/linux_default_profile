@@ -1,7 +1,5 @@
 {
-    "workbench.colorTheme": "GitHub Dark",
     "boot-java.rewrite.reconcile": true,
-    "workbench.iconTheme": "material-icon-theme",
     "git.confirmSync": false,
     "git.enableSmartCommit": true,
     "explorer.confirmDelete": false,
@@ -13,5 +11,8 @@
         }
     ],
     "githubPullRequests.createOnPublishBranch": "never",
-    "workbench.editor.enablePreview": false
+    "workbench.editor.enablePreview": false,
+    "redhat.telemetry.enabled": false,
+    "workbench.colorTheme": "GitHub Dark",
+    "workbench.iconTheme": "material-icon-theme"
 }

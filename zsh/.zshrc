@@ -23,6 +23,8 @@ source $HOME/.configenv/zsh/functions.sh
 source $HOME/.configenv/zsh/functions.sh-completion
 source $HOME/.configenv/zsh/_gh
 
+export XDG_DATA_DIRS="$XDG_DATA_DIRS:/var/lib/snapd/desktop/"
+
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
@@ -45,6 +47,9 @@ PATH=$PATH:/usr/local/go/bin
 autoload -U compinit
 compinit -i
 
+#eval "$(ssh-agent -s)" >/dev/null
+#ssh-add 2>/dev/null
+
 if [ -z "$SSH_AUTH_SOCK" ]; then
    # Check for a currently running instance of the agent
    RUNNING_AGENT="`ps -ax | grep 'ssh-agent -s' | grep -v grep | wc -l | tr -d '[:space:]'`"
@@ -53,5 +58,7 @@ if [ -z "$SSH_AUTH_SOCK" ]; then
         ssh-agent -s &> $HOME/.ssh/ssh-agent
    fi
    eval `cat $HOME/.ssh/ssh-agent`
-   ssh-add ~/.ssh/id_ed25519
+   ssh-add
 fi
+
+emulate sh -c 'source /etc/profile.d/apps-bin-path.sh'
