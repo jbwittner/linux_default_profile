@@ -48,8 +48,8 @@ PATH=$PATH:/usr/local/go/bin
 autoload -U compinit
 compinit -i
 
-#eval "$(ssh-agent -s)" >/dev/null
-#ssh-add 2>/dev/null
+eval "$(ssh-agent -s)" >/dev/null
+ssh-add 2>/dev/null
 
 if [ -z "$SSH_AUTH_SOCK" ]; then
    # Check for a currently running instance of the agent
