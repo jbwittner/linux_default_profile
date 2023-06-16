@@ -62,4 +62,4 @@ if [ -z "$SSH_AUTH_SOCK" ]; then
    ssh-add
 fi
 
-emulate sh -c 'source /etc/profile.d/apps-bin-path.sh'
+# emulate sh -c 'source /etc/profile.d/apps-bin-path.sh'

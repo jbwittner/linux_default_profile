@@ -66,18 +66,21 @@ docker_ps() {
 
 extract() {
     if [ -f "$1" ] ; then
+        local filename=$(basename -- "$1")
+        local foldername="${filename%.*}"
+        mkdir -p "$foldername"
         case "$1" in
-            *.tar.bz2)   tar xvjf "$1"     ;;
-            *.tar.gz)    tar xvzf "$1"     ;;
-            *.bz2)       bunzip2 "$1"      ;;
-            *.rar)       unrar x "$1"      ;;
-            *.gz)        gunzip "$1"       ;;
-            *.tar)       tar xvf "$1"      ;;
-            *.tbz2)      tar xvjf "$1"     ;;
-            *.tgz)       tar xvzf "$1"     ;;
-            *.zip)       unzip "$1"        ;;
+            *.tar.bz2)   tar xvjf "$1" -C "$foldername"     ;;
+            *.tar.gz)    tar xvzf "$1" -C "$foldername"     ;;
+            *.bz2)       bunzip2 "$1" -c > "$foldername/${filename%.bz2}"      ;;
+            *.rar)       unrar x "$1" "$foldername"     ;;
+            *.gz)        gunzip -c "$1" > "$foldername/${filename%.gz}"       ;;
+            *.tar)       tar xvf "$1" -C "$foldername"      ;;
+            *.tbz2)      tar xvjf "$1" -C "$foldername"     ;;
+            *.tgz)       tar xvzf "$1" -C "$foldername"     ;;
+            *.zip)       unzip "$1" -d "$foldername"        ;;
             *.Z)         uncompress "$1"   ;;
-            *.7z)        7z x "$1"         ;;
+            *.7z)        7z x "$1" -o"$foldername"         ;;
             *)           echo "format de fichier inconnu" ;;
         esac
     else
@@ -85,7 +88,7 @@ extract() {
     fi
 }
 
-clearhistory() {
+clear_history() {
     if [ -n "$BASH_VERSION" ]; then
         history -c
         history -w
