@@ -15,6 +15,7 @@
     "redhat.telemetry.enabled": false,
     "workbench.colorTheme": "GitHub Dark",
     "workbench.iconTheme": "material-icon-theme",
+    "window.restoreWindows": "none",
     "idf.espIdfPath": "/home/jbwittner/esp/esp-idf",
     "idf.pythonBinPath": "/home/jbwittner/.espressif/python_env/idf5.2_py3.10_env/bin/python",
     "idf.toolsPath": "/home/jbwittner/.espressif",

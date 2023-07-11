@@ -63,3 +63,5 @@ if [ -z "$SSH_AUTH_SOCK" ]; then
 fi
 
 # emulate sh -c 'source /etc/profile.d/apps-bin-path.sh'
+
+export PATH="$PATH:$HOME/bin"
