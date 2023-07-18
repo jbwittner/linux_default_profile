@@ -10,22 +10,7 @@ Il suffit donc de cloner le projet de la manière suivante :
 git clone git@github.com:jbwittner/linux_default_profile.git $HOME/.configenv
 ```
 
-Lancer la commande 
-
-```
-sudo update_env.sh
-```
-
-Cela va installer ZSH, oh my zsh, et le configurer.
-Cela va aussi y ajouter la configuration git, npm et maven.
-
-Il reste à set les variables (si nécessaire) :
-
-```
-export USER_GITHUB_LOGIN="jbwittner"
-export USER_GITHUB_KEY=""
-export SONAR_TOKEN=""
-```
+Il suffit de lancer les différentes conf en fonction des besoins.
 
 Il est possible qu'il faille installer Sdkman et nvm:
 
