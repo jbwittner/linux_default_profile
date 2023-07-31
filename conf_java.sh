@@ -5,8 +5,8 @@ MAVEN_VERSION=3.8.7
 
 echo "[INFO] Vérification de l'installation de SDKMAN!..."
 
-apt install --yes zip
-apt install --yes unzip
+sudo apt install --yes zip
+sudo apt install --yes unzip
 
 # Vérifie si SDKMAN! est installé et le met à jour si c'est le cas
 if [ ! -d "$HOME/.sdkman" ]; then
