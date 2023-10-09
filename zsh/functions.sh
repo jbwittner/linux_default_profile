@@ -48,8 +48,15 @@ docker_system_clean() {
     docker_container_clean
     docker_volume_clean
     docker_network_clean
+    echo "All Docker system resources (not images) have been cleaned."
+}
+
+docker_system_clean_and_images(){
+    docker_container_clean
+    docker_volume_clean
+    docker_network_clean
     docker_images_clean
-    echo "All Docker system resources have been cleaned."
+    echo "All Docker system resources (and images) have been cleaned."
 }
 
 docker_live_stats() {
