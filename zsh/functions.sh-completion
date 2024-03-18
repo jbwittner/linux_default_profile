@@ -1,7 +1,0 @@
-_functions() {
-    local cur prev
-    cur="${COMP_WORDS[COMP_CWORD]}"
-    prev="${COMP_WORDS[COMP_CWORD-1]}"
-    COMPREPLY=( $( compgen -W "$(grep -o '^[a-zA-Z0-9_]*()' functions.sh | tr -d '()' )" -- "${cur}" ) )
-}
-complete -F _functions functions.sh
