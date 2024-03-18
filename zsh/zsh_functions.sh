@@ -104,3 +104,8 @@ clear_history() {
         fc -R
     fi
 }
+
+majSysteme() {
+  sudo apt update && sudo apt upgrade -y
+  echo "Mise à jour terminée."
+}

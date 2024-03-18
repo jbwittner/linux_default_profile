@@ -13,29 +13,29 @@ plugins=(
   zsh-syntax-highlighting
 )
 
-alias cdworkspace='cd $HOME/workspace'
-
 source $ZSH/oh-my-zsh.sh
 
+alias cdworkspace='cd $HOME/workspace'
+
+# bat
+alias cat='batcat --style="header" --paging=never'
+alias catn='batcat --pager "less -RF"'
+alias batn='batcat --pager "less -RF"'
+
+# exa
+alias ls="exa -a"                   # short, multi-line
+alias ll="exa -1a"                  # list, 1 per line
+alias ld="ll"                       # ^^^, NOTE: Trying to move to this for alternate hand commands
+alias la="exa -lagh"                # list with info
+alias lt="exa -a --tree --level=2"  # list with tree level 2
+alias ltf="exa -a --tree"           # list with tree
+alias lat="exa -lagh --tree"        # list with info and tree
+
+# fd
+alias locate="fdfind"
+alias find="fdfind"
+
 source $HOME/.configenv/zsh/env-vars.sh
-source $HOME/.configenv/zsh/functions.sh
-source $HOME/.configenv/zsh/functions.sh-completion
-source $HOME/.configenv/zsh/_gh
-
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="$HOME/.sdkman"
-[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-# pnpm
-export PNPM_HOME="/home/jbwittner/.local/share/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
-# pnpm end
+source $HOME/.configenv/zsh/zsh_functions.sh
 
 alias lzd='lazydocker'
