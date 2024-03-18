@@ -19,3 +19,5 @@ Pour la gestion de java il faut utiliser `sdkman` => https://sdkman.io
 https://www.jetbrains.com/help/idea/installation-guide.html#standalone
 
 https://www.jetbrains.com/help/idea/working-with-the-ide-features-from-command-line.html#standalone
+
+Commande : `sudo ln -s /opt/idea-IC-233.14808.21/bin/idea.sh /usr/local/bin/idea`
