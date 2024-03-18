@@ -10,3 +10,6 @@ Il suffit de copier faire `cp env-vars-model.sh env-vars.sh`
 
 https://github.com/sharkdp/bat
 
+## Lazydocker
+
+https://github.com/jesseduffield/lazydocker
