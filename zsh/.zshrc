@@ -41,3 +41,21 @@ alias lzd='lazydocker'
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+export DOTNET_ROOT=$HOME/.dotnet
+export PATH=$PATH:$DOTNET_ROOT:$DOTNET_ROOT/tools
+export PATH=/usr/local/texlive/2024/bin/x86_64-linux:$PATH
+# pnpm
+export PNPM_HOME="/home/jbwittner/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+export RAIDRUNNER_BLIZZARD_CLIENT_ID="1029e791f4bb4a5ba1cbd230ce0dd5a1"
+export RAIDRUNNER_BLIZZARD_SECRET_ID="tpa4CDrjTHQlp8DYWXR0zHrqup58yg9g"

@@ -1,5 +1,5 @@
-export USER_GITHUB_LOGIN=""
-export USER_GITHUB_KEY=""
+export GITHUB_USERNAME=""
+export GITHUB_TOKEN=""
 export GH_TOKEN=""
 export SONAR_TOKEN=""
 export NEXT_TELEMETRY_DISABLED=1

@@ -29,6 +29,7 @@
     pager = less
     editor = code --wait
     whitespace = -trailing-space
+	autocrlf = input
 
 [diff]
     # Use descriptive initials for changes
