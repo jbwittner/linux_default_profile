@@ -23,6 +23,7 @@ source $HOME/.configenv/zsh/env-vars.sh
 source $HOME/.configenv/zsh/zsh_functions.sh
 
 alias lzd='lazydocker'
+alias lzg='lazygit'
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
