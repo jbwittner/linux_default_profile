@@ -7,8 +7,8 @@ if ! [ -x "$(command -v zsh)" ]; then
   echo "[INFO] Zsh n'est pas installé. Installation de Zsh..."
 
   # Installe Zsh
-  sudo apt-get update
-  sudo apt-get install zsh
+  sudo dnf update
+  sudo dnf install zsh
 fi
 
 echo "[INFO] Vérification de l'installation de oh-my-zsh..."

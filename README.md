@@ -14,6 +14,8 @@ git clone git@github.com:jbwittner/linux_default_profile.git $HOME/.configenv
 
 Pour la gestion de java il faut utiliser `sdkman` => https://sdkman.io
 
+`curl -s "https://get.sdkman.io" | bash`
+
 # Intellij
 
 https://www.jetbrains.com/help/idea/installation-guide.html#standalone
