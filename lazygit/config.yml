@@ -1,0 +1,9 @@
+customCommands:
+  - key: '<c-f>'
+    context: 'localBranches, remotes, remoteBranches, tags'
+    command: "git fetch -pf"
+gui:
+  statusPanelView: allBranchesLog
+git:
+  log:
+    showWholeGraph: true
