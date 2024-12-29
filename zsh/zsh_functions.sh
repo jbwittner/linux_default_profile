@@ -109,3 +109,31 @@ majSysteme() {
   sudo apt update && sudo apt upgrade -y
   echo "Mise à jour terminée."
 }
+
+# Fonction pour charger les variables d'un fichier .env dans le shell actuel
+loadenv() {
+    # Définit le fichier par défaut à .env
+    local env_file="${1:-.env}"
+
+    # Vérifie si le fichier existe
+    if [[ ! -f "$env_file" ]]; then
+        echo "Erreur : Le fichier '$env_file' n'existe pas."
+        return 1
+    fi
+
+    # Lit le fichier ligne par ligne et exporte les variables
+    while IFS='=' read -r key value || [[ -n "$key" ]]; do
+        # Ignore les commentaires et les lignes vides
+        if [[ "$key" =~ ^#.*$ || -z "$key" ]]; then
+            continue
+        fi
+
+        # Supprime les guillemets autour de la valeur (si présents)
+        value="${value%\"}"
+        value="${value#\"}"
+
+        export "$key=$value"
+    done < "$env_file"
+
+    echo "Variables chargées depuis '$env_file'."
+}
