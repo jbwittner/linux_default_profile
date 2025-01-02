@@ -10,16 +10,14 @@ Il suffit donc de cloner le projet de la manière suivante :
 git clone git@github.com:jbwittner/linux_default_profile.git $HOME/.configenv
 ```
 
-# Java
+# configuration
 
-Pour la gestion de java il faut utiliser `sdkman` => https://sdkman.io
+Il faut effectuer des liens symboliques pour les fichiers de configuration.
 
-`curl -s "https://get.sdkman.io" | bash`
+```bash
+ln -s $HOME/.configenv/git/.gitconfig $HOME/.gitconfig
+```
 
-# Intellij
-
-https://www.jetbrains.com/help/idea/installation-guide.html#standalone
-
-https://www.jetbrains.com/help/idea/working-with-the-ide-features-from-command-line.html#standalone
-
-Commande : `sudo ln -s /opt/idea-IC-233.14808.21/bin/idea.sh /usr/local/bin/idea`
+```bash
+ln -s $HOME/.configenv/zsh/.zshrc $HOME/.zshrc
+```
