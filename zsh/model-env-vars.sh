@@ -1,2 +1,0 @@
-export NEXT_TELEMETRY_DISABLED=1
-export GITHUB_TOKEN=""
