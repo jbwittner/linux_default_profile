@@ -56,3 +56,4 @@ if [ -s "$NVM_DIR/bash_completion" ]; then
   source "$NVM_DIR/bash_completion" # Charge NVM Bash completion
 fi
 
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
