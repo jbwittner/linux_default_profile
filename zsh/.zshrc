@@ -22,6 +22,10 @@ source $ZSH/oh-my-zsh.sh
 # Ajout de chemins supplémentaires au PATH
 export PATH="$HOME/.local/bin:/usr/local/texlive/2024/bin/x86_64-linux:$PATH"
 
+# Configuration de l'éditeur de texte
+export EDITOR=micro
+export VISUAL=micro
+
 # Alias personnalisés
 alias cdworkspace='cd $HOME/workspace'
 alias lzd='lazydocker'
