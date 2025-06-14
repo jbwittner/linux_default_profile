@@ -21,3 +21,8 @@ ln -s $HOME/.configenv/git/.gitconfig $HOME/.gitconfig
 ```bash
 ln -s $HOME/.configenv/zsh/.zshrc $HOME/.zshrc
 ```
+
+Si le fichier existe déjà il faut le supprimer avant : 
+```bash
+rm $HOME/.zshrc
+```
