@@ -32,3 +32,7 @@ fi
 if [ -s "$NVM_DIR/bash_completion" ]; then
   source "$NVM_DIR/bash_completion" # Charge NVM Bash completion
 fi
+
+export M2_HOME="$HOME/.sdkman/candidates/maven/current"
+
+export DOCKER_HOST=unix://$(podman machine inspect --format '{{.ConnectionInfo.PodmanSocket.Path}}')

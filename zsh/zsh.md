@@ -21,3 +21,13 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 ## Lazydocker
 
 https://github.com/jesseduffield/lazydocker
+
+## Podman
+Il est possible d'utiliser podman mais il faut le configurer pour qu'il fonctionne comme docker.
+
+```bash
+sudo rm  /usr/local/bin/docker
+sudo ln -s $(which podman) /usr/local/bin/docker
+```
+
+Cela permet d'utiliser les commandes docker avec podman.
