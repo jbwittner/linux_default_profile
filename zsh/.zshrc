@@ -5,7 +5,7 @@ export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="robbyrussell"
 
 # Variable boolean pour activer ou désactiver des features
-USE_PODMAN=true
+USE_PODMAN=false
 
 # Plugins pour Oh-My-Zsh
 plugins=(
@@ -47,3 +47,8 @@ if [ -f "$HOME/.configenv/zsh/zsh_functions.sh" ]; then
   source $HOME/.configenv/zsh/zsh_functions.sh
 fi
 
+# The following lines have been added by Docker Desktop to enable Docker CLI completions.
+fpath=(/Users/jbwittner/.docker/completions $fpath)
+autoload -Uz compinit
+compinit
+# End of Docker CLI completions

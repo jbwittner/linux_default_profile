@@ -35,4 +35,4 @@ fi
 
 export M2_HOME="$HOME/.sdkman/candidates/maven/current"
 
-export DOCKER_HOST=unix://$(podman machine inspect --format '{{.ConnectionInfo.PodmanSocket.Path}}')
+#export DOCKER_HOST=unix://$(podman machine inspect --format '{{.ConnectionInfo.PodmanSocket.Path}}')
