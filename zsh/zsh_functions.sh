@@ -137,3 +137,22 @@ loadenv() {
 
     echo "Variables chargées depuis '$env_file'."
 }
+
+# Fonction qui demande à l'utilisateur une string et retourne la valeur en base 64
+encode_base64() {
+    local input_string
+    local encoded_string
+
+    # Zsh syntax for prompting the user with 'read': read "variable?Prompt"
+    read "input_string?Enter the string to encode in base64: "
+
+    # The rest of the function is compatible with both Bash and Zsh.
+    if [[ -z "$input_string" ]]; then
+        echo "Error: No string provided. Operation cancelled." >&2
+        return 1
+    fi
+
+    encoded_string=$(printf %s "$input_string" | base64)
+    
+    echo "Base64 encoded string: $encoded_string"
+}
